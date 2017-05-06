@@ -4,6 +4,9 @@
 public class HelloMain {
 
     public static void main(String[] args) {
-        System.out.println(" Welcome to Java Interview Question");
+        System.out.println(" Welcome to Java Interview Question :)");
+        System.out.println(" Welcome to Java Interview Question :)");
+
+
     }
 }
