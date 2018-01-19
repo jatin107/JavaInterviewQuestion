@@ -1,14 +1,14 @@
 package codingInterview.arrays;
 
-public class URLify {
+public class URLifyString {
 
 
-    static String replaceSpace(String str) {
+    private static String replaceSpace(String str) {
 
-        int spaceCount = 0, newIndex = 0;
+        int spaceCount = 0, newIndex;
         char ch[] = str.toCharArray();
-        for (int i = 0; i < ch.length; i++)
-            if (ch[i] == ' ')
+        for (char c : ch)
+            if (c == ' ')
                 spaceCount++;
 
         newIndex = ch.length + spaceCount * 2;
@@ -36,7 +36,7 @@ public class URLify {
 
 //        System.out.println("Hello World!");
         System.out.println(replaceSpace("Mr Jatin Goyal   "));
-        System.out.println(replaceSpace("sagar"));
+        System.out.println(replaceSpace("sagar "));
     }
 
 
