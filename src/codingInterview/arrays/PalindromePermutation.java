@@ -54,6 +54,7 @@ public class PalindromePermutation {
     }
 
     private static boolean checkPalindromePermutation3(String str) {
+<<<<<<< HEAD
         int bitVector = createBitVector(str);
         return bitVector == 0 || checkExactlyOneBitSet(bitVector);
         //space: O(1) time: O(N)
@@ -80,6 +81,8 @@ public class PalindromePermutation {
         else
             vec &= ~mask;
         return vec;
+=======
+>>>>>>> origin/master
     }
 
 
@@ -104,7 +107,10 @@ public class PalindromePermutation {
 
         System.out.println(checkPalindromePermutation2("nitin"));
         System.out.println(checkPalindromePermutation2("jatin"));
+<<<<<<< HEAD
         System.out.println(checkPalindromePermutation3("abc"));
+=======
+>>>>>>> origin/master
 
 
     }
