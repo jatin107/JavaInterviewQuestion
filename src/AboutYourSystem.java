@@ -6,7 +6,7 @@ import java.util.Properties;
 public class AboutYourSystem {
 
     public static void main(String[] args) {
-        System.out.println("Welcome to Java Interview Question :)");
+        System.out.println("Welcome to Java Interview Questions :)");
         System.out.println("Java Version:" + System.getProperty("java.version"));
         System.out.println("AvailableProcessors:" + Runtime.getRuntime().availableProcessors());
         System.out.printf("MaxMemory  :%.3fGiB\n", +((double) Runtime.getRuntime().maxMemory() / (1024.0 * 1024.0 * 1024.0)));
