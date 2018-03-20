@@ -26,7 +26,39 @@ public class SubSequence {
         return my;
 
     }
-//    E=F()+AF()
+
+    public static void gss1(String ques, String asf) {
+        if (ques.length() == 0) {
+            System.out.println(asf);
+            return;
+        }
+
+        char ch = ques.charAt(0);
+        gss1(ques.substring(1), asf);
+        gss1(ques.substring(1), asf + ch);
+
+
+        return;
+
+    }
+
+    public static void gss1withascii(String ques, String asf) {
+        if (ques.length() == 0) {
+            System.out.println(asf);
+            return;
+        }
+
+        char ch = ques.charAt(0);
+        gss1withascii(ques.substring(1), asf);
+        gss1withascii(ques.substring(1), asf + ch);
+        gss1withascii(ques.substring(1), asf + (int) ch);
+
+
+        return;
+
+    }
+
+    //    E=F()+AF()
     public static ArrayList<String> gsswAscii(String s) {
         if (s.length() == 0) {
             ArrayList a = new ArrayList();
@@ -38,7 +70,7 @@ public class SubSequence {
         for (String fs : rr) {
             my.add(fs);
             my.add(s.charAt(0) + fs);
-            my.add((int)s.charAt(0) + fs);
+            my.add((int) s.charAt(0) + fs);
 
         }
 
@@ -51,7 +83,7 @@ public class SubSequence {
 
     {
         //System.out.println(gss("ab"));
-        System.out.println(gsswAscii("ab"));
+        gss1withascii("ab", "");
         return;
     }
 

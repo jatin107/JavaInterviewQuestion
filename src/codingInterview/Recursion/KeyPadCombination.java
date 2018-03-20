@@ -7,7 +7,8 @@ public class KeyPadCombination {
     static String ms[] = {".", "abc", "def", "ghl", "jkl", "mno", "pqr", "st", "uvwx", "yz"};
 
     public static void main(String s[]) {
-        System.out.println(getAStr("179"));
+        //System.out.println(getAStrQA("179"););
+        getAStrQA("179", "");
         //System.out.println(Integer.parseInt("147".charAt(0)+""));
     }
 
@@ -33,4 +34,21 @@ public class KeyPadCombination {
         return my;
     }
 
+    public static void getAStrQA(String Ques, String ans) {
+        if (Ques.length() == 0) {
+            System.out.println(ans);
+            return;
+
+        }
+        char ch = Ques.charAt(0);
+        String ros = Ques.substring(1);
+        int i = ch - '0';
+        for (char chs : ms[i].toCharArray()) {
+            //getAStrQA(ros, ans);
+            getAStrQA(ros, chs + ans);
+        }
+        return;
+    }
+
 }
+
