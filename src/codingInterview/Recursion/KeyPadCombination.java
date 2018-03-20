@@ -34,7 +34,7 @@ public class KeyPadCombination {
         return my;
     }
 
-    public static void getAStrQA(String Ques, String ans) {
+    public static void getAStrQA(String Ques, String ans) {//KBC
         if (Ques.length() == 0) {
             System.out.println(ans);
             return;
