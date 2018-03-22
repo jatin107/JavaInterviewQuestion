@@ -4,8 +4,6 @@ public class BoardGame {
     static int counter = 0;
     //static int ladder[] = {0, 0, 13, 11, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     static int ladder[] = new int[20];
-    ladder[18]=2
-    ladder[2]=17
 
     public static int pdp(int src, int desc, String ans) {//print Board Path
         if (src == desc) {
@@ -106,7 +104,7 @@ public class BoardGame {
 
     public static void main(String str[]) {
         //System.out.println("-->" + pdp(0,10, ""));
-        System.out.println("-->" + pdpwith16Ladder(0, 15, ""));
+//        System.out.println("-->" + pdpwith16Ladder(0, 15, ""));
 
 
     }
