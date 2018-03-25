@@ -5,6 +5,9 @@ public class NQueen {
     //Place Queen such that No Queen kill each Other
     //1. Generate combination
     //2.check the combination is valid or not?
+    //Reactive vs Proactive
+    //Slow vs fast
+
     static int c = 0;
 
     public static void nQueen(boolean chess[][], int qpsf, String asf, int lpq) {
@@ -26,6 +29,53 @@ public class NQueen {
 
             }
 
+        }
+        return;
+
+    }
+
+    public static void nQueenProactive(boolean chess[][], int qpsf, String asf, int lpq) {
+        if (qpsf == chess.length) {
+//    System.out.println(++c + "." + asf);
+            //if (isBoardValid(chess) == true)
+            System.out.println(++c + "." + asf);
+            return;
+        }
+
+        for (int i = 1 + lpq; i < chess.length * chess.length; i++) {
+
+            int r = i / chess.length;
+            int c = i % chess.length;
+            if (chess[r][c] == false) {
+                if (isQueesSave(chess, r, c) == true) {
+                    chess[r][c] = true;
+                    nQueenProactive(chess, qpsf + 1, asf + "q" + (qpsf + 1) + "b" + i + " , ", i);
+                    chess[r][c] = false;
+                }
+
+            }
+
+        }
+        return;
+
+    }
+
+    public static void nQueenPSubSequence(boolean chess[][], int box, int qpsf, String asf) {
+        if (qpsf == chess.length) {
+            //    System.out.println(++c + "." + asf);
+            //if (isBoardValid(chess) == true)
+            System.out.println(++c + "." + asf);
+            return;
+        }
+        if (box >= chess.length * chess.length)
+            return;
+        nQueenPSubSequence(chess, box + 1, qpsf, asf);
+        int r = box / chess.length;
+        int c = box % chess.length;
+        if (isQueesSave(chess, r, c) == true) {
+            chess[r][c] = true;
+            nQueenPSubSequence(chess, box + 1, qpsf + 1, asf + "q" + (qpsf + 1) + "b" + box + " ,");
+            chess[r][c] = false;
         }
         return;
 
@@ -75,7 +125,16 @@ public class NQueen {
 
         boolean chess[][] = new boolean[4][4];
         //permutation(boxes, 6, 0, "");
-        nQueen(chess, 0, "", -1);
+        long st = System.currentTimeMillis();
+        //nQueen(chess, 0, "", -1);
+        long end = System.currentTimeMillis();
+        //nQueenProactive(chess, 0, "", -1);
+        long end2 = System.currentTimeMillis();
+        nQueenPSubSequence(chess, 0, 0, "");
+        long end3 = System.currentTimeMillis();
+        System.out.println("1" + (end - st));
+        System.out.println("2" + (end2 - end));
+        System.out.println("2" + (end3 - end2));
         // coinChangeCombination(new int[]{2, 3, 5, 6}, 10, 0, "");
 
 
