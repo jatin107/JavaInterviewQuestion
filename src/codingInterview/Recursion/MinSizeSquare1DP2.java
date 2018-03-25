@@ -71,6 +71,31 @@ public class MinSizeSquare1DP2 {
 
     }
 
+    public static int maxSquareSubMatrixMemoQB(int mat[][], int sr, int sc, int QB[][]) {
+
+        int dr = mat.length - 1;
+        int dc = mat[0].length - 1;
+
+        if (sr == dr || sc == dc) return mat[dr][dc];
+        if (mat[sr][sc] == 0) return mat[sr][sc];
+        if (QB[sr][sc] != 0) return QB[sr][sc];
+        else {
+            int max = 1 + Math.min(Math.min(
+                    maxSquareSubMatrixMemo(mat, sr, sc + 1),
+                    maxSquareSubMatrixMemo(mat, sr + 1, sc)),
+                    maxSquareSubMatrixMemo(mat, sr + 1, sc + 1));
+            if (omax < max) {
+                omax = max;
+                ormax = sr;
+                ocmax = sc;
+            }
+            QB[sr][sc] = 0;
+            return max;
+        }
+
+
+    }
+
 
     public static void main(String strp[]) {
         int n = 2;
@@ -100,6 +125,10 @@ public class MinSizeSquare1DP2 {
         //System.out.println(minCostPathMem(0, 0, mat.length - 1, mat[0].length - 1, mat, new int[mat.length][mat.length]));
         maxSquareSubMatrixTabulation(mat);
         maxSquareSubMatrixMemo(mat, 0, 0);
+        maxSquareSubMatrixMemoQB(mat, 0, 0, new int[mat.length][mat[0].length]);
+        System.out.println(omax + "@" + ormax + "," + ocmax);
+        omax = 0;
+        maxSquareSubMatrixMemoQB(mat, 0, 0, new int[mat.length][mat[0].length]);
         System.out.println(omax + "@" + ormax + "," + ocmax);
 
 
