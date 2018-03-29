@@ -67,6 +67,38 @@ public class GoldMineDP2 {
         return;
     }
 
+    private static int digMineRecusive(int mine[][], int r, int c) {
+
+        if (c == mine[0].length - 1) return mine[r][c];
+        int max = Integer.MIN_VALUE;
+        int tr = 0, mr = 0, br = 0;
+        if (r > 0)
+            br = digMineRecusive(mine, r - 1, c + 1);
+        if (r < mine.length - 1)
+            tr = digMineRecusive(mine, r + 1, c + 1);
+        mr = digMineRecusive(mine, r, c + 1);
+
+        return Math.max(Math.max(tr, mr), br) + mine[r][c];
+
+    }
+
+    private static int digMineMemo(int mine[][], int r, int c, int QB[][]) {
+
+        if (c == mine[0].length - 1) return mine[r][c];
+        if (QB[r][c] != 0) return QB[r][c];
+        int max = Integer.MIN_VALUE;
+        int tr = 0, mr = 0, br = 0;
+        if (r > 0)
+            br = digMineMemo(mine, r - 1, c + 1, QB);
+        if (r < mine.length - 1)
+            tr = digMineMemo(mine, r + 1, c + 1, QB);
+        mr = digMineMemo(mine, r, c + 1, QB);
+        QB[r][c] = Math.max(Math.max(tr, mr), br) + mine[r][c];
+        return QB[r][c];
+
+    }
+
+
     public static void main(String strp[]) {
         int mat[][] = {
                 {
@@ -83,6 +115,16 @@ public class GoldMineDP2 {
                 }
         };
         digMine(mat);
+        int oMax = 0;
+        int QB[][] = new int[mat.length][mat[0].length];
+        for (int r = 0; r < mat.length; r++) {
+            //int rMax = digMineMemo(mat, r, 0);
+            int rMax = digMineMemo(mat, r, 0, QB);
+            System.out.println(rMax);
+            if (rMax > oMax)
+                oMax = rMax;
+        }
+        System.out.println("--->" + oMax);
 
     }
 
