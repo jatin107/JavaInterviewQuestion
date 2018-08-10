@@ -1,0 +1,33 @@
+SOLID
+
+S: Single responsibility Principle ..DRY Don't repeat yourself
+O: Open Close principle
+Software module should open for extension and closed for Modification
+new functionality should caused minimum changes in already tested module.
+Strategy Pattern : It allow an change in algorithm behaviour at runtime.  
+
+D: Dependency Inversion
+Dependent :cars to be driven right side of the road.
+voilation of DIP: when higher level module depend on lower level ones susceptible to change
+Danger of Coupling: Tight coupling
+DIP: when higher level module should not depends on lower level modules
+Depend on Abstraction!
+Abstract classes and interface don't change as often as concrete derivatives
+Template design Pattern-- Lunch process
+Cohesion : Keep related things together
+Depend on Abstract classes and interfaces because they change less often the concrete classes.
+
+LSP: Liskov substitution principle
+LSP: subtype must be substitutable for their basetypes  
+IS-A relation ship in Doctor and Employee
+Teacher and Subtitute teacher
+
+Interface Segregation Principles
+Put interface to decouple the concern.
+
+Dependency Injection
+
+
+ 
+
+
