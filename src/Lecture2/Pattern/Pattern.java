@@ -6,7 +6,7 @@ import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
 
 import jdk.nashorn.internal.runtime.regexp.joni.ScanEnvironment;
 
-public class Pattern1 {
+public class Pattern {
 
 	public static void pattern(int n) {
 		for (int i = 1; i <= n; i++) {
@@ -73,15 +73,106 @@ public class Pattern1 {
 	}
 
 	public static void pattern6X(int n) {
-		for (int i = 0; i < n; i++)
-		{
+		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
-				
+
 				if (i == j || i + j == n - 1)
 					System.out.print("*");
-				else System.out.print(" ");
+				else
+					System.out.print(" ");
 			}
-		System.out.println();
+			System.out.println();
+		}
+
+	}
+
+	public static void pattern7(int n) {
+		int str = n / 2 + 1;
+		int spc = 1;
+		// n=5
+		// 3 1 3
+		// 2 2 2
+		// 1 3 1
+		// 2 2 2
+		// 3 1 3
+
+		for (int i = 0; i < n; i++) {
+
+			for (int p = 0; p < str; p++)
+				System.out.print("* ");
+			for (int p = 0; p < spc; p++)
+				System.out.print("  ");
+			for (int p = 0; p < str; p++)
+				System.out.print("* ");
+			if (i < n / 2) {
+				str--;
+				spc += 2;
+			} else
+
+			{
+				spc -= 2;
+				str++;
+			}
+			System.out.println();
+
+		}
+
+	}
+
+	public static void pattern8(int n) {
+		int spc = n / 2 + 1;
+		int str = 1;
+		for (int i = 0; i < n; i++) {
+
+			for (int p = 0; p < spc; p++)
+				System.out.print("  ");
+			for (int p = 0; p < str; p++)
+				System.out.print("* ");
+			if (i < n / 2) {
+				str += 2;
+				spc--;
+			} else
+
+			{
+				spc++;
+				str -= 2;
+			}
+			System.out.println();
+
+		}
+
+	}
+
+	public static void pattern9(int n) {
+		int spc = n / 2 + 1;
+		int str = 1;
+		int val = 1, rval = 1;
+		for (int i = 0; i < n; i++) {
+
+			for (int p = 0; p < spc; p++)
+				System.out.print("  ");
+			for (int p = 0; p < str; p++) {
+				if (p < str / 2)
+					System.out.print(rval++ + " ");
+				else
+					System.out.print(rval-- + " ");
+
+			}
+
+			if (i < n / 2) {
+				str += 2;
+				spc--;
+				rval = ++val;
+			} else
+
+			{
+
+				spc++;
+				rval = --val;
+				str -= 2;
+			}
+			System.out.println();
+
 		}
 
 	}
@@ -94,7 +185,9 @@ public class Pattern1 {
 		// pattern(n);
 		// pattern2(n);
 //		pattern5(n);
-		pattern6X(n);
+//		pattern7(n);
+		// pattern8(n);
+		pattern9(n);
 
 	}
 
