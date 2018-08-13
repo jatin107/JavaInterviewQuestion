@@ -1,0 +1,15 @@
+PepCoding
+1. JDK and Eclipse IDE (Intelligence,build, run,Navigator)
+JDK--tools (path,cmd)
+
+Varibale
+SimpleIntrest //RAM Storage 
+
+//F3 to check the documentation 
+//perfrances install JRE and check the documentation
+
+//RT.jar 
+
+3. if else
+ 
+

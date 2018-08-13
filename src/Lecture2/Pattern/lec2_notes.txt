@@ -1,0 +1,10 @@
+PepCoding
+1. JDK and Eclipse IDE (Intelligence,build, run,Navigator)
+JDK--tools (path,cmd)
+
+Varibale
+SimpleIntrest
+
+NCk==NCN-K
+row_C_col
+n_C_k+1=NCK(n-k)/(K+1)
