@@ -5,4 +5,4 @@
  * @author Mr. X
  *
  */
-package Lecture23.LinkedLists1;
+package Lecture24.LinkedList;

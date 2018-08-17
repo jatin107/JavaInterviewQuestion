@@ -1,4 +1,4 @@
-package Lecture23.LinkedLists1;
+package Lecture24.LinkedList;
 
 public class Client {
 
@@ -15,6 +15,9 @@ public class Client {
 		// list.removeLast();
 		list.display();
 		list.removeAt(2);
+		list.display();
+//		list.recursion(list);
+		list.recursionDataIterativally();
 		list.display();
 
 		/*

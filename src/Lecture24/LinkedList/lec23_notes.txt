@@ -1,0 +1,24 @@
+Array (contiguous  storage )
+pros-> get/set fast
+con-> inefficient use of memory./Constant size
+Stack to store refreance 
+Head to store Memory location
+--> contiguous memory allocation lead to O(1) to access the Memory location in heap 
+----------------------------
+ArrayList  dynamic grow in size (special type of Array)
+con-> inefficient use of memory.
+--------------------------
+LinkedList
+-->Non contiguous
+-->Node and next node address
+-->Use storage optimally/memory effcient
+-->get/set are slow
+-->Head
+--------------------------
+
+
+
+
+
+
+

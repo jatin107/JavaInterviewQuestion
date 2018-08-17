@@ -1,4 +1,4 @@
-package Lecture23.LinkedLists1;
+package Lecture24.LinkedList;
 
 public class LikedList {
 
@@ -141,6 +141,7 @@ public class LikedList {
 			newNode.data = data;
 			newNode.next = nodeAt;
 			nodeAtm1.next = newNode;
+			size++;
 		}
 
 	}
@@ -148,7 +149,7 @@ public class LikedList {
 	private Node getNodeAt(int i) throws Exception {
 		if (this.size == 0)
 			throw new Exception("Size is Empty");
-		else if (i < 0 || i >= size)
+		else if (i < 0 || i > size)
 			throw new Exception("Index out of Bound");
 		Node temp = head;
 		for (int k = 0; k < i; k++) {
@@ -190,8 +191,39 @@ public class LikedList {
 			Node node = getNodeAt(size - 1);
 			node.next = null;
 			tail = node;
+			size--;
 			return val;
+			
 		}
+
+	}
+
+	public void recursion(LikedList n) {
+		recursionHelper(n.head);
+	}
+
+	public void recursionDataIterativally() throws Exception {
+		int left = 0;
+		int right = this.size -1;
+
+		while (left < right) {
+			Node lnode = getNodeAt(left);
+			Node rnode = getNodeAt(right);
+			int data = lnode.data;
+			lnode.data = rnode.data;
+			rnode.data = data;
+			right--;
+			left++;
+
+		}
+
+	}
+
+	private void recursionHelper(Node n) {
+		if (n == null)
+			return;
+		recursionHelper(n.next);
+		System.out.println(n.data);
 
 	}
 }
