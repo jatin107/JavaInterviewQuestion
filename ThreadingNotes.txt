@@ -1,3 +1,29 @@
+Interview Question for T
+
 1. ThreadFactory
 2. Stopping a thread
 3. Executor Framework
+Exchange Class= B
+Synchonised block--genarate byte code that avoid race condition in scope
+this--intrinsic lock
+synchronisation using explicit object
+
+Double-Checked locking Optmization 
+java docs --> Intricsic lock and Expicit lock ,
+ 
+
+
+
+
+Refrance
+
+https://en.wikipedia.org/wiki/Happened-before
+https://en.wikipedia.org/wiki/Java_memory_model
+https://en.wikipedia.org/wiki/Guarded_suspension
+http://tutorials.jenkov.com/java-concurrency/nested-monitor-lockout.html
+https://en.wikipedia.org/wiki/Spinlock
+https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock 
+https://blog.takipi.com/java-8-stampedlocks-vs-readwritelocks-and-synchronized/
+https://en.wikipedia.org/wiki/Monitor_(synchronization)
+https://en.wikipedia.org/wiki/Monitor_(synchronization)#Condition_variables
+https://en.wikipedia.org/wiki/Monitor_(synchronization)#Spin-waiting
