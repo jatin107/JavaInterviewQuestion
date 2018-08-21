@@ -1,0 +1,17 @@
+
+Lanbda Expression
+-- ways to representing Functions
+--Pre built function building blocks
+--set of function composition methods 
+
+
+Stream
+-- Wrapper around collection
+-- map reduce filter forEach
+--lazy Evaluation
+--Stream can be made parallel automatically with need to write 
+multi threaded code
+-- 
+
+Anonimous inner class
+
