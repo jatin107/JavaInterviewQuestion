@@ -1,0 +1,31 @@
+Recursion --> Faith and Expectation
+
+Tower of Hanio
+-- Sometime Hopeless
+
+
+--src 
+--helper
+--dest
+
+//Rules
+R1:one at a time
+R2: smaller on larger
+
+//Expectation
+1. print  instruction
+2. print n disc from src to destination following r1 and r2
+
+//Faith
+1. N-1 instruction
+2. smaller
+src,dest,helper
+E =toh("A","B","C",3)
+F1=toh("A","C","B",2)
+move nth src to desc 
+F2= toh("C","B","A",n-1=2)
+
+
+//High level analysis
+//High level analysis call stack in tree form
+
