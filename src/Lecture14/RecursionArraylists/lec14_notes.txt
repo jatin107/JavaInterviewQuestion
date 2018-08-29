@@ -1,0 +1,60 @@
+declare AL<s> l
+intialise l=new ArrayLis<s>()
+length size()
+print tostring()
+get
+set
+remove
+add
+insert
+
+
+Q SubString ABCD ==> 10 4*5/2=10 
+A
+AB
+ABC
+ABCD
+B
+BC
+BCD
+C
+CD
+D 
+
+Q : SubSequence  abc ==8
+___
+__c
+_b_
+_bc
+a__
+a_c
+ab_
+ABC
+
+ps AL<s> gss(String str){}
+
+Expectation abc =___,__c,_b_,_bc,a__,a_c,,ab_ABC
+Faith  bc=__,_c,b_,ab
+E= _F+a.F
+
+
+
+
+Recursion 1
+PD
+PI
+PDI
+F
+P
+TOH
+
+Recursion 2
+D
+DR
+Max
+find
+firstI
+lastIndex
+AllINdexes
+BubbleSort
+
