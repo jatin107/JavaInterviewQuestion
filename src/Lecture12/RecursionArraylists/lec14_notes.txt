@@ -31,6 +31,9 @@ a_c
 ab_
 ABC
 
+n-->2^n/2 pairs*n=total char
+31 char==2^30*31==very large number
+
 ps AL<s> gss(String str){}
 
 Expectation abc =___,__c,_b_,_bc,a__,a_c,,ab_ABC

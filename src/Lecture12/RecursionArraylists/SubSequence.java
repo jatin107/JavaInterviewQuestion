@@ -1,8 +1,8 @@
-package Lecture14.RecursionArraylists;
+package Lecture12.RecursionArraylists;
 
 import java.util.ArrayList;
 
-public class SubStringArrayList {
+public class SubSequence {
 
 	public static ArrayList<String> subSequence(String str) {
 
