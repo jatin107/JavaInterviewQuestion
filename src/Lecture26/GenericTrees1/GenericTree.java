@@ -3,6 +3,8 @@ package Lecture26.GenericTrees1;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.sun.org.apache.regexp.internal.recompile;
+
 public class GenericTree {
 
 	private class Node {
@@ -53,12 +55,42 @@ public class GenericTree {
 
 	}
 
+	public boolean find(int data) {
+		return find(root, data);
+	}
+
+	private boolean find(Node node, int data) {
+		if (node.data == data)
+			return true;
+		for (Node n : node.children) {
+			if (n.data == data)
+				return true;
+
+		}
+		return false;
+	}
+
+	public int height() {
+		return height(root);
+	}
+
+	public int height(Node node) {
+
+		int max = -1;
+		for (Node n : node.children) {
+			int t = height(n);
+			max = Math.max(max, t);
+		}
+
+		return max + 1;
+	}
+
 	private Node root;
 
 	GenericTree() {
 
 		Scanner sc = new Scanner(System.in);
-		construct(sc, null, 1);
+		root = construct(sc, null, 1);
 	}
 
 // Expectation > to create ith child for parent node
